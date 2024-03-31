@@ -12,4 +12,8 @@ Predictive maintenance are believed to reduce the chances of a breakdown by coll
 Data Flow Chart
 
 ## In this project
+<<<<<<< HEAD
 I will utilized ETL process to convert data coming from DCS and load it into database.
+=======
+I will utilized ETL process to convert data coming from DCS and load it into database.
+>>>>>>> 746e540cd7b2770e624335c61eec9f642d84d056
