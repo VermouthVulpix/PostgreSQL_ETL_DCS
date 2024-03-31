@@ -1,0 +1,35 @@
+$psql -d postgres -U postgres -f ./src/SQL/CREATE_TEMP_IP.sql
+
+$psql -d postgres -U postgres -c "\COPY temporary_ip FROM '.\Data\IP_Raw.csv' WITH (FORMAT CSV, HEADER);"
+
+$psql -d postgres -U postgres -f ./src/SQL/CREATE_IP.sql
+
+$psql -d postgres -U postgres -f ./src/SQL/INSERT_IP.sql
+
+$psql -d postgres -U postgres -f ./src/SQL/CREATE_TEMP_DI.sql
+
+$psql -d postgres -U postgres -c "\COPY temporary_di FROM '.\Data\DI_Raw.csv' WITH (FORMAT CSV, HEADER);"
+
+$psql -d postgres -U postgres -f ./src/SQL/CREATE_DI.sql
+
+$psql -d postgres -U postgres -f ./src/SQL/INSERT_DI.sql
+
+$psql -d postgres -U postgres -f ./src/SQL/CREATE_PDT.sql
+
+$psql -d postgres -U postgres -c "\COPY PDT FROM '.\Data\PDT.csv' WITH (FORMAT CSV, HEADER);"
+
+$psql -d postgres -U postgres -f ./src/SQL/CREATE_LDT.sql
+
+$psql -d postgres -U postgres -c "\COPY LDT FROM '.\Data\LDT.csv' WITH (FORMAT CSV, HEADER);"
+
+$psql -d postgres -U postgres -f ./src/SQL/CREATE_Sensor.sql
+
+$psql -d postgres -U postgres -c "\COPY sensor FROM '.\Data\Sensor.csv' WITH (FORMAT CSV, HEADER);"
+
+$psql -d postgres -U postgres -f ./src/SQL/CREATE_Tag_Match.sql
+
+$psql -d postgres -U postgres -f ./src/SQL/Insert_Tag_Match.sql
+
+$psql -d postgres -U postgres -f ./src/SQL/CREATE_Update_Tag_Match_Function.sql
+
+$psql -d postgres -U postgres -f ./src/SQL/Create_Trigger_Update_Tag_Match.sql
