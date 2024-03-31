@@ -3,6 +3,9 @@ An ETL process using PostgreSQL to help collect data through DCS system
 ## Motivation 
 Predictive maintenance are believed to reduce the chances of a breakdown by collecting and analyzing data of equipment's performance and conditions. 
 
+## Introduction
+This ETL process, or we say the process of extraction, transformation, and loading, is developed to store tables either being downloaded from Distributed Control System (DCS) or being monitored manually in the database system. The focus is to bridge the gap between different data structures between that defined by DCS and by engineers. By this process, the efficiency in updating source and its correspondent data is believed to be improved. Totally, the process will include format transformation, customized functions definition, and synchronizing data updating to guarantee data consistency and integrity.
+
 ## Structure
 - Sensors:
 - PLC: Programmable Logic Controllers
